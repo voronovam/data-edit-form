@@ -1,0 +1,118 @@
+.form
+    form(method='' data-type='education' data-id='1')
+        div.form__form-head
+            h1.form__headline Учебное заведение
+            button(type='submit').btn Сохранить
+
+        fieldset.form__item
+            legend.form__label Специальность
+            .row.align-center
+                .w-50
+                    .select
+                        select(required name='select-1' id='select-1').select__select
+                            option(disabled selected value='') Выберите специализацию
+                            option(value='1') Option 1
+                            option(value='2') Option 2
+                .w-50
+                    .form__box-middle
+                        label(for='checkbox-1').check
+                            input(type='checkbox' id='checkbox-1' name='checkbox-1').check__input
+                            span.check__box
+                            span.check__label Высшее учебное заведение Санкт-Петербурга
+
+        fieldset.form__item
+            legend.form__label Заведение
+            .select
+                select(required name='select-2' id='select-2').select__select
+                    option(disabled selected value='') Выберите учёную степень или звание
+                    option(value='1') Option 1
+                    option(value='2') Option 2
+
+            .form__item-spacer
+                label(for='checkbox-2').check
+                    input(type='checkbox' checked id='checkbox-2' name='checkbox-2').check__input
+                    span.check__box
+                    span.check__label Магистратура учебного заведения
+
+            .form__item-spacer
+                button.form__add-btn.btn.btn_outline Добавить
+
+            fieldset.form__item-spacer
+                .form__new-item
+                    .form__remove-item
+                        include ../parts/_remove-btn
+                .form__box-add
+                    .row
+                        .w-50
+                            .form__box-add-header
+                                label(for='select-3').form__label-regular Заведение
+                                .switcher
+                                    input(type='checkbox' id='switch-1' name='switch-1' checked).switcher__input
+                                    label(for='switch-1').form__label-regular Switch
+                            .select
+                                select(required name='select-3' id='select-3').select__select
+                                    option(disabled selected value='') Выберите учёную степень или звание
+                                    option(value='1') Option 1
+                                    option(value='2') Option 2
+
+                        .w-50
+                            .form__box-add-header
+                                label(for='select-4').form__label-regular Специальность
+                            .select.select_error
+                                select(required name='select-4' id='select-4').select__select
+                                    option(disabled selected value='') Выберите специализацию
+                                    option(value='1') Option 1
+                                    option(value='2') Option 2
+                            .form__form-error Error
+
+                button.form__item-spacer.btn.btn_outline.btn_icon
+                    svg(width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M9.75 1C9.75 0.585786 9.41421 0.25 9 0.25C8.58579 0.25 8.25 0.585786 8.25 1V8.25H1C0.585787 8.25 0.25 8.58579 0.25 9C0.25 9.41421 0.585787 9.75 1 9.75H8.25V17C8.25 17.4142 8.58579 17.75 9 17.75C9.41421 17.75 9.75 17.4142 9.75 17V9.75H17C17.4142 9.75 17.75 9.41421 17.75 9C17.75 8.58579 17.4142 8.25 17 8.25H9.75V1Z')
+                    span Добавить
+
+            fielset
+                .form__new-item
+                    .form__remove-item
+                        include ../parts/_remove-btn
+
+                .form__box-add.form__item-spacer
+                    .row
+                        .w-50
+                            .form__box-add-header
+                                label(for='select-5').form__label-regular Заведение
+                                .switcher
+                                    input(type='checkbox' id='switch-2' name='switch-2').switcher__input
+                                    label(for='switch-2').form__label-regular Switch
+                            .select
+                                select(required name='select-5' id='select-5').select__select
+                                    option(disabled selected value='') Выберите учёную степень или звание
+                                    option(value='1') Option 1
+                                    option(value='2') Option 2
+
+                        .w-50
+                            .form__box-add-header
+                                legend.form__label-regular Специальность
+                            .select
+                                select(required name='select-6' id='select-6').select__select
+                                    option(disabled selected value='') Выберите специализацию
+                                    option(value='1') Option 1
+                                    option(value='2') Option 2
+
+                button(disabled).form__item-spacer.btn.btn_disabled
+                    span Добавить
+
+        fieldset.form__item
+            legend.form__label Range
+            .form__range
+                div
+                    label(for='range-value-1').visually-hidden
+                    input(type='number' name='range-value-1' id='range-value-1' value='0').form__range-number
+                div.range.form__range-box
+                    label(for='range').visually-hidden
+                    input(type='range' id='range' name='range' min='1' max='100' step='1' value='15').range__input
+                div
+                    label(for='range-value-2').visually-hidden
+                    input(type='number' id='range-value-2' name='range-value-2' value='0').form__range-number
+
+
+

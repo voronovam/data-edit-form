@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru-Ru")
+  head
+    meta(charset='utf-8')
+    meta(name='description' content='')
+    title Title
+    link(href="./css/main.css" rel="stylesheet")
+
+  body(data-theme='light')
+    include blocks/header
+    .container
+      main.main
+        .main__body
+          .main__left-box
+          div.main__content
+            include blocks/form
+            include parts/_toggle-theme
+
+
+    include blocks/footer
+
+    script(async, defer, src='./js/main.js')

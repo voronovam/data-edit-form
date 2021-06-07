@@ -1,0 +1,22 @@
+.select
+  $self: &
+  position: relative
+  color: var(--color-Main-1)
+  &_error
+    #{ $self }__select
+      border-color: var(--color-red)
+
+  &__select
+    appearance: none
+    outline: none
+    padding: 11px 16px
+    background: var(--color-white)
+    border: 1px solid var(--color-Strock)
+    border-radius: $border-radius
+    width: 100%
+
+    &:focus
+      border: 1px solid var(--color-accent)
+
+    & option:not(:first-of-type)
+      color: var(--color-Secondary)

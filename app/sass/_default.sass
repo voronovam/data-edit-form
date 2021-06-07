@@ -1,0 +1,139 @@
+[data-theme='light']
+  --color-mode: 'light'
+  --color-bg: #FCFCFC
+  --color-white: #fff
+  --color-accent: #A9967D
+  --color-gray: #C4C4C4
+  --color-Main-1: #282828
+  --color-Secondary: #9F9F9F
+  --color-Strock: #DAD5CE
+  --color-red: #D14114
+  --color-Background-1: #F4F4F4
+  --color-range-bg: #F4F4F4
+  --color-btn: #fff
+  --color-btn-disabled: #F4F4F4
+  --color-btn-disabled-border: #F4F4F4
+  --color-toggle-bg: #F4F4F4
+  --color-toggle-tab: #FFFFFF
+[data-theme='dark']
+  --color-mode: 'dark'
+  --color-bg: #0F1723
+  --color-white: #141C2C
+  --color-accent: #60A772
+  --color-gray: #202E44
+  --color-Main-1: #fff
+  --color-Strock: #DAD5CE
+  --color-red: #D14114
+  --color-Background-1: --color-bg
+  --color-range-bg: #0F1723
+  --color-toggle-bg: rgba(244, 244, 244, 0.2)
+  --color-toggle-tab: rgba(255, 255, 255, 0.3)
+  --color-btn-disabled: rgba(244, 244, 244, 0.1)
+  --color-btn-disabled-border: #F6F6F6
+html,
+body
+  height: 100%
+  margin: 0
+  padding: 0
+
+body
+  color: var(--color-Main-1)
+  background: var(--color-bg)
+  font-family: $font-regular
+  font-weight: 400
+  line-height: 24px
+  font-size: 14px
+  transition: background .3ms ease-in-out, color 200ms ease
+
+*, ::after, ::before
+  box-sizing: border-box
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+
+ul, ol
+  margin: 30px 0 0
+  padding: 0 0 0 20px
+  & li
+    &::marker
+      color: var(--color-accent)
+
+::placeholder,
+button,
+input,
+select
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+input
+  &:invalid
+    border-color: var(--color-red)
+
+select
+  &:invalid
+    color: var(--color-Secondary)
+
+fieldset
+  border: none
+  padding: 0
+  margin: 0
+::placeholder
+  color: var(--color-Secondary)
+
+button
+  cursor: pointer
+  border: none
+  background: transparent
+
+svg
+  fill: currentColor
+
+.visually-hidden
+  @include visually-hidden
+
+.main
+  margin-top: 24px
+  &__body
+    display: flex
+  &__left-box
+    background: var(--color-gray)
+    width: 180px
+    height: 466px
+    flex-shrink: 0
+  &__content
+    width: 100%
+    padding: 24px 23px
+    background: var(--color-white)
+    border-radius: $border-radius
+    margin-left: 8px
+    box-shadow: 0 1px 4px rgba(59, 67, 87, 0.1)
+
+
+.container
+  max-width: $desktop
+  margin: 0 auto
+  padding: 0 8px
+
+.row
+  display: flex
+  flex-wrap: wrap
+  margin-right: -8px
+  margin-left: -8px
+.w-50
+  flex: 0 0 50%
+  max-width: 50%
+  padding-right: 8px
+  padding-left: 8px
+.w-100
+  flex: 0 0 100%
+  max-width: 100%
+  padding-right: 8px
+  padding-left: 8px
+
+.align-center
+  align-items: center
+.align-bottom
+  align-items: flex-end
+
+

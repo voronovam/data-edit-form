@@ -1,0 +1,34 @@
+.check
+  padding-left: 1.4em
+  position: relative
+  cursor: pointer
+  &__input
+    @include visually-hidden
+    &:focus + .check__box
+      border-color: var(--color-accent)
+    &:checked + .check__box
+      border-color: var(--color-accent)
+      background-color: var(--color-accent)
+      background-image: url("./../img/check.svg")
+      background-repeat: no-repeat
+      background-position: center
+  &__box
+    position: absolute
+    top: .1em
+    width: 1.2em
+    height: 1.2em
+    border-radius: $border-radius
+    background-color: var(--color-white)
+    border: 1.5px solid var(--color-Strock)
+    margin-left: -1.4em
+    transition: background-color .2s ease
+  &__label
+    @include text
+    line-height: 26px
+    user-select: none
+
+
+
+
+
+

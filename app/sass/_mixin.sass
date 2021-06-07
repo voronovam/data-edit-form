@@ -1,0 +1,44 @@
+@mixin headline_4
+  font-family: $font-accent
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 20px
+  color: var(--color-Main-1)
+
+@mixin label()
+  font-size: 14px
+  line-height: 16px
+  font-family: $font-bold
+  font-style: normal
+  font-weight: 700
+  color: var(--color-Main-1)
+
+@mixin text()
+  font-size: 14px
+  line-height: 16px
+  font-family: $font-regular
+  font-style: normal
+  font-weight: 400
+
+@mixin desktop()
+  @media (min-width: $desktop)
+    @content
+
+@mixin visually-hidden()
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+@mixin error()
+  font-family: $font-regular
+  font-style: normal
+  font-weight: 400
+  font-size: 12px
+  line-height: 16px
+  color: var(--color-red)
